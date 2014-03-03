@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+  <div align="center">
+  <div style= "font-family:sans-serif; background-color:#DCDCDC; color:#00008B">
+    <head>
+           <title>Teams</title>
+    </head>
+
+    <body>
+            <h1>DENVER BRONCOS</h1>
+        <p> WINS: 1    •    LOSSES: 1 </p>
+      <table>
+         <tr>
+            <td>Home Team | </td>
+            <td>Away Team | </td>
+            <td>Home Score | </td>
+            <td>Away Score </td>
+        </tr>
+   <% @nfl.each do |team| %>
+    <% if team["home_team"] == "Broncos" || team["away_team"] == "Broncos" %>
+        <tr>
+             <td><%= team["home_team"]%></td>
+             <td><%= team["away_team"]%></td>
+             <td><%= team["home_score"]%></td>
+             <td><%= team["away_score"]%></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+      <img src="http://www.hdpaperwall.com/wp-content/uploads/2013/11/1391286.jpg">
+    </body>
+    </div>
+    </div>
+  </html>

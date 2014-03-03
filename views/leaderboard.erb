@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+  <div align="center">
+  <div style= "font-family:sans-serif; background-color:#708090; color:#000000">
+
+    <head>
+           <title>Leaderboard</title>
+    </head>
+
+    <body link="#000000" vlink="#000000" alink="#D3D3D3">
+            <p><font size="7"><b>NFL TEAMS<b></font></p>
+        <img src="http://nflmad.files.wordpress.com/2013/03/nfl-teams.jpg">
+        <p>
+      <a href=http://localhost:4567/teams/broncos><font size="4">BRONCOS | </font></a>
+      <a href=http://localhost:4567/teams/colts><font size="4">COLTS | </font></a>
+      <a href=http://localhost:4567/teams/patriots><font size="4">PATRIOTS | </font></a>
+      <a href=http://localhost:4567/teams/steelers><font size="4">STEELERS </font></a>
+      </p>
+
+  <table>
+         <tr>
+            <td align="center"><font color="#FF7F50">HOME TEAM   •  </font></td>
+            <td align="center"><font color="#FF7F50">AWAY TEAM   • </font></td>
+            <td align="center"><font color="#FF7F50">HOME SCORES • </font></td>
+            <td align="center"><font color="#FF7F50">AWAY SCORES  </font></td>
+        </tr>
+   <% @nfl.each do |team| %>
+        <tr>
+
+             <td align="center"><font color="#D3D3D3"><%= team["home_team"]%></font></td>
+             <td align="center"><font color="#D3D3D3"><%= team["away_team"]%></font></td>
+             <td align="center"><font color="#D3D3D3"><%= team["home_score"]%></font></td>
+             <td align="center"><font color="#D3D3D3"><%= team["away_score"]%></font></td>
+        </tr>
+         <% end %>
+      </table>
+
+
+<p><font size="4" color="#FF7F50"> RANKINGS </font></p>
+
+<div style= "color:#D3D3D3">
+    <p>
+    WINS •
+    Patriots: 3 •
+    Broncos: 1 •
+    Colts: 0 •
+    Steelers: 0
+    </p>
+
+    <p>
+    LOSSES •
+    Colts: 2 •
+    Broncos: 1 •
+    Steelers: 1 •
+    Patriots: 0
+    </p>
+</div>
+</body>
+</div>
+</div>
+</html>

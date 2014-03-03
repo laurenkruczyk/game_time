@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+  <div align="center">
+  <div style= "font-family:sans-serif; background-color:#DCDCDC; color:#00008B">
+    <head>
+           <title>Teams</title>
+    </head>
+
+    <body>
+            <h1>PITTSBURGH STEELERS</h1>
+            <p> WINS: 0   •    LOSSES: 1 </p>
+      <table>
+         <tr>
+            <td>Home Team | </td>
+            <td>Away Team | </td>
+            <td>Home Score | </td>
+            <td>Away Score </td>
+        </tr>
+   <% @nfl.each do |team| %>
+    <% if team["home_team"] == "Steelers" || team["away_team"] == "Steelers" %>
+        <tr>
+             <td><%= team["home_team"]%></td>
+             <td><%= team["away_team"]%></td>
+             <td><%= team["home_score"]%></td>
+             <td><%= team["away_score"]%></td>
+           </tr>
+          <% end %>
+        <% end %>
+      </table>
+      <img src="http://www.sports-logos-screensavers.com/user/Pittsburgh_Steelers_Helmet2.jpg">
+      </body>
+    </div>
+    </div>
+  </html>
